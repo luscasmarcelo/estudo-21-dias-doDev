@@ -18,8 +18,23 @@ function calcularAumento(nome, salario) {
     }
 
     let novoSalario = salario + (salario * aumento)
-    alert(`${nome}, seu novo salário é: ${novoSalario.toFixed(2)}`)
+    alert(`Nome do colaborador: ${nome}`)
+    alert(`Salário do colaborador sem o aumento: ${salario}`)
+    alert(`Você tem direito a ${aumento}% de aumento`)
+    alert(`Seu salário reajustado é de: ${novoSalario}`)
+
+    perguntarNovamente()
 }
+
+function perguntarNovamente() {
+    let resposta = prompt("Deseja calcular novamente? (sim/nao")
+        if (resposta === "sim") {
+            perguntarColaborador()
+        } else {
+            alert("Programa encerrado!")
+        }
+    }
+
 
 perguntarColaborador()
 
